@@ -17,31 +17,97 @@ In this application we can see the description of the restaurant, its menus, boo
 - IDE like PHP Storm
 
 
-## Run Locally
+# Run Locally
 
-Clone the project
+Install XAMMP
+https://www.apachefriends.org/fr/index.html
+
+Create a repository on your local machine
+
+```
+cd C:\xampp\
+mkdir apps
+cd apps
+```
+
+Clone the project into your "apps" directory
 
 ```bash
   git clone https://git.heroku.com/studi.git
 ```
 
-Go to the project directory
+### Serve your application with XAMPP
+We will then configure Apache to access our website. For this we will open the "C:\xampp\apache\conf\extra\httpd-vhosts.conf" file with a text editor and add the following lines:
 
-```bash
-  cd my-project
+```
+<VirtualHost *:80>
+    ServerName symfony.localhost
+
+    DocumentRoot "C:/xampp/apps/symfony/public"
+    DirectoryIndex index.php
+
+    <Directory "C:/xampp/apps/symfony/public">
+        Require all granted
+
+        FallbackResource /index.php
+    </Directory>
+</VirtualHost>
 ```
 
-Install dependencies
+Run XAMMP :
+- Launch Apache
+- Launch SQL
 
-```bash
-  npm install
+Click on apache -> admin
+You should see the apps on local server
+
+Click on SQL -> admin
+You should see the apps on local server with PhpMyAdmin
+
+
+### database configuration / connect to the database
+
+Creation of database an administrator for the back-office of the web application
+
+If it is not already installed in our project, to install Doctrine and all the additional features, just run this command:
+```
+compose req orm
+```
+All that remains is to configure our database connection in the .env file at the root of our project by replacing the values ​​between {}:
+
+```
+DATABASE_URL="mysql://{db_user:db_password}@127.0.0.1:3306/{db_name}"
+```
+If the database has not already been created, Symfony can do it for us with a command.
+
+```
+php bin/console doctrine:database:create
+```
+If the command says that the password is not good and you are working with XAMPP with the default configuration of MySQL, the DATABASE_URL parameter should be:
+
+```
+DATABASE_URL="mysql://root@127.0.0.1:3306/{db_name}"
+```
+Replace {db_name} with the name of the database you want to create.
+
+For update the database you can use
+```
+php bin/console make:migration 
+php bin/console doctrine:migrations:migrate
+```
+or
+```
+Import SQL script on phpmyadmin
+```
+You can also write a SQL and create a backoffice use like this code below:
+```
+INSERT INTO `user` (`id`, `email`, `roles`, `password`, `nom`, `prenom`, `tel`, `allergies`, `couverts`, `confidentialite`) VALUES
+(33, 'admin@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$rtFnsGiOyUuUIhdM7Uf6ROdVZPXqAxZvYV0aTP1GYXIekBuXmcs8K', '', '', '', '', '', ''),
 ```
 
-Start the server
+This use can acces to the backoffice of the website and manage "form", "User" and "message"
 
-```bash
-  npm run start
-```
+
 
 ## Install Symfony
 
@@ -193,7 +259,7 @@ To run this project, you will need to add the following environment variables to
 
 ## Authors
 
-- [@JasonMaurice](https://www.github.com/octokatherine)
+- [@JasonMaurice](https://git.heroku.com/studi.git)
 
 
 
