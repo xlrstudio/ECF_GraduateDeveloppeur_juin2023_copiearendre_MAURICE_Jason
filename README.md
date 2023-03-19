@@ -33,7 +33,7 @@ cd apps
 Clone the project into your "apps" directory
 
 ```bash
-  git clone https://git.heroku.com/studi.git
+  git clone https://github.com/xlrstudio/ECF_GraduateDeveloppeur_juin2023_copiearendre_MAURICE_Jason.git
 ```
 
 ### Serve your application with XAMPP
