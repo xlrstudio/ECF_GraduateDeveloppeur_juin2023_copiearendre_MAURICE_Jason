@@ -104,6 +104,11 @@ You can also write a SQL and create a backoffice use like this code below:
 INSERT INTO `user` (`id`, `email`, `roles`, `password`, `nom`, `prenom`, `tel`, `allergies`, `couverts`, `confidentialite`) VALUES
 (33, 'admin@gmail.com', '[\"ROLE_ADMIN\"]', '$2y$13$rtFnsGiOyUuUIhdM7Uf6ROdVZPXqAxZvYV0aTP1GYXIekBuXmcs8K', '', '', '', '', '', ''),
 ```
+Use hash-password for hashing the password before
+```
+php bin/console security:hash-password
+
+```
 
 This use can acces to the backoffice of the website and manage "form", "User" and "message"
 
