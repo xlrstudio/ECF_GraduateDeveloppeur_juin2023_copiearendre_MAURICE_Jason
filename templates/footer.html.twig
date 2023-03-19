@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Le restaurant Quai Antique" />
+    <meta name="keywords" content="restaurant, restaurant savoyard, Arnaud Michant"/>
+    <meta name="author" content="Jason Maurice" />
+    
+</head>
+<body>
+{% block footer %}
+<div class="space"></div>
+<div class="container-xs">
+  <footer class="container-2">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li>
+        <a class="nav-link px-2 link-secondary" href="/accueil">Accueil</a>
+      </li>
+      <li>
+        <a class="nav-link px-2 link-dark reservation" href="/menu">Menu</a>
+      </li>
+      <li>
+        <a class="nav-link px-2 link-dark reservation" href="/formulaire"><mark>Réserver</mark></a>
+      </li>
+      <li style="list-style: none; display: inline">
+        <a class="nav-link px-2 link-dark" href="/login">Se connecter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link px-2 text-muted" href="/mentionslegales">Mentions légales</a>
+      </li>
+        {% if is_granted('ROLE_ADMIN') %}
+          <li class="nav-item">
+            <a href="/admin" class="nav-link px-2 link-dark">Administration</a></li>
+          </li>        {% endif %}
+
+    </ul>
+    <p class="text-center text-muted">© 2023 Jason MAURICE</p>
+    <div class="container-sm">
+    <div class="container-4">
+      <h5>Nos horaires d'ouvertures</h5>
+    </div>
+    <div class="container">
+      <table class="table">
+        <tbody>
+        <tr>
+          <td>Lundi</td>
+          <td class="color-table">12:00 - 14:30</td>
+          <td class="color-table">19:00 - 22:30</td>
+        </tr>
+        <tr>
+          <td>Mardi</td>
+          <td class="color-table">12:00 - 14:30</td>
+          <td class="color-table">19:00 - 22:30</td>
+        </tr>
+        <tr>
+          <td>Mercredi</td>
+          <td class="color-table">12:00 - 14:30</td>
+          <td class="color-table">19:00 - 21:30</td>
+        </tr>
+        <tr>
+          <td>Jeudi</td>
+          <td class="color-table">12:00 - 14:30</td>
+          <td class="color-table">19:00 - 22:30</td>
+        </tr>
+        <tr>
+          <td>Vendredi</td>
+          <td class="color-table">12:00 - 15:00</td>
+          <td class="color-table">19:00 - 23:00</td>
+        </tr>
+        <tr>
+          <td>Samedi</td>
+          <td class="color-table">19:00 - 23:00</td>
+        </tr>
+        <tr>
+          <td>Dimanche</td>
+          <td class="color-table">Fermé</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    </div>{% endblock %}
+  </footer>
+</div>
+</body>
+</html>

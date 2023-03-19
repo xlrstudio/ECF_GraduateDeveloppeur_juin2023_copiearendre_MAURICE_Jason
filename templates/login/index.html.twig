@@ -1,0 +1,28 @@
+{# templates/login/index.html.twig #}
+{% extends 'base6.html.twig' %}
+
+{# ... #}
+
+{% block bodyy %}
+    {% if error %}
+        <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+<div class="">
+    <form action="{{ path('app_login') }}" method="post">
+        <label class="mb-3 row" for="username">Email:   </label>
+        <input class="mb-3 row" type="text" id="username" name="_username" value="{{ last_username }}">
+        <br>
+        <label class="mb-3 row" for="password">Mot de passe:</label>
+        <input class="mb-3 row" type="password" id="password" name="_password">
+
+        <br><br>
+        <input class="mb-3 row" type="hidden" name="_target_path" value="/profile">
+        <div class="container-xl justify-content-center">
+        <a href="/profile" style="text-decoration:none"><button class=" px-2 btn btn-warning justify-content-center container-xxl nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0" type="submit">Se connecter</button></a>
+        </div>
+    </form>
+
+    <div class="p-5 space2"></div>
+</div>
+{% endblock %}

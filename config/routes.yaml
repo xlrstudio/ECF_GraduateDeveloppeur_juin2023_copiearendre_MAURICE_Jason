@@ -1,0 +1,58 @@
+controllers:
+  resource: ../src/Controller/
+  type: attribute
+
+index:
+  path: /accueil
+  controller: App\Controller\DefaultController::index
+
+carte:
+  path: /menu
+  controller: App\Controller\MenuController::menu
+
+reservation:
+  path: /reservation
+  controller: App\Controller\ReservationController::reservation
+
+connection:
+  path: /connection
+  controller: App\Controller\ConnectionController::connection
+
+mentions:
+  path: /mentionslegales
+  controller: App\Controller\MentionsController::mentions
+
+test:
+  path: /test
+  controller: App\Controller\TestController::test
+
+
+  # config/routes.yaml
+
+  # the "app_lucky_number" route name is not important yet
+formulaire:
+  path: /formulaire
+  controller: App\Controller\FormController::index
+
+dashboard:
+  path: /admin
+  controller: App\Controller\Admin\DashboardController::index
+
+validation:
+  path: /contacter
+  controller: App\Controller\ValidationController::validation
+
+login:
+  path: /login
+  controller: App\Controller\SecurityController::login
+
+inscription:
+  path: /inscription
+  controller: App\Controller\RegistrationController::index
+
+
+
+
+app_logout:
+  path: /logout
+  methods: GET

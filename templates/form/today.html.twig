@@ -1,0 +1,9 @@
+{% set today = "now"|date("Y-m-d") %}
+{% set count = 0 %}
+{% for form in forms %}
+    {% if form.date|date("Y-m-d") == today %}
+        {% set count = count + 1 %}
+    {% endif %}
+{% endfor %}
+
+There are {{ count }} reservations today.

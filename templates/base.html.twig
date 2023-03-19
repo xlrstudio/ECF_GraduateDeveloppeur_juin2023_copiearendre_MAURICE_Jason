@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Le restaurant Quai Antique" />
+    <meta name="keywords" content="restaurant, restaurant savoyard, Arnaud Michant"/>
+    <meta name="author" content="Jason Maurice" />
+    
+	<title>{% block title %}Welcome! {% endblock %}</title>
+</head>
+<body>
+{% block stylesheets %}
+	<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/united/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/united/_variables.scss" rel="stylesheet">
+	<link href="public/style.css" rel="stylesheet">{% endblock %} {% block javascripts %}
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js">
+	</script> {% endblock %}
+
+{% include("navbaradmin.html.twig") %}
+{% block css %}
+{% endblock %}
+{% block body %}{% endblock %}
+</body>
+
+</html>

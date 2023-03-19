@@ -1,0 +1,16 @@
+{% extends 'base2.html.twig' %}
+
+{% block form %}
+
+</script>
+{{ form_start(Form) }}
+    {{ form_row(form.Nom) }}
+    {{ form_row(form.Prenom) }}
+    {{ form_row(form.email) }}
+    {{ form_row(form.Couverts) }}
+    {{ form_row(form.Heure) }}
+    {{ form_row(form.Allergies) }}
+    {{ form_row(form.Date) }}
+    <input type="submit" />
+    {{ form_end(form) }}
+{% endblock %}

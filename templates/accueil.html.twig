@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Le restaurant Quai Antique" />
+    <meta name="keywords" content="restaurant, restaurant savoyard, Arnaud Michant"/>
+    <meta name="author" content="Jason Maurice" />
+
+    <title>QUAI ANTIQUE - Accueil</title>
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <script defer src="/assets/js/script.js">
+    </script>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include("navbar.html.twig") %} {% block css %} {% endblock %}
+<header>
+    <div class="hero-image" id="container">
+        <div class="hero-text">
+            <img alt="" src="/asset/media/img/logo3.png"> <button class="button item">Voir la carte</button>
+        </div>
+    </div>
+    <div class="hero-image-2">
+        <div class="hero-text-2">
+            <div class="hero-text-color">
+                <h2>Un restaurant authentique</h2>
+                <p>Le Chef Arnaud Michant aime passionnément les produits - et producteurs - de la Savoie.</p>
+                <p>Le restaurant gastronomique Quai Antique propose une cuisine d'excellente qualité. Les ingrédients sont sélectionnés localement et soigneusement cultivés ou conservés aux frais des restaurants. La nourriture est servie sur de la porcelaine et l'argenterie pour déguster des d'ingrédients de qualité tels que du caviar ou des truffes.</p>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="item-child">
+        <h2>Des plats gastronomiques et authentiques</h2>
+    </div>
+</div>
+<div class="container">
+    <div class="item">
+        <a class="a-img-txt" href=""><img alt="Asperges du marché" class="a-img" src="/asset/media/img/01.jpg"> <span class="a-txt">Asperges du marché</span></a>
+    </div>
+    <div class="item">
+        <a class="a-img-txt" href=""><img alt="Boeuf de Savoie" class="a-img" src="/asset/media/img/02.jpg"> <span class="a-txt">Asperges du marché</span></a>
+    </div>
+    <div class="item">
+        <a class="a-img-txt" href=""><img alt="Saucisse aux choux" class="a-img" src="/asset/media/img/03.jpg"> <span class="a-txt">Boeuf de Savoie</span></a>
+    </div>
+    <div class="item">
+        <a class="a-img-txt" href=""><img alt="Saucisse aux choux" class="a-img" src="/asset/media/img/04.jpg"> <span class="a-txt">Saucisse aux choux</span></a>
+    </div>
+    <div class="item">
+        <a class="a-img-txt" href=""><img alt="Les crozets revisités" class="a-img" src="/asset/media/img/05.jpg"> <span class="a-txt">Les crozets revisités</span></a>
+    </div>
+    <div class="item">
+        <a class="a-img-txt" href=""><img alt="Saumon Savoyard" class="a-img" src="/asset/media/img/06.jpg"> <span class="a-txt">Saumon Savoyard</span></a>
+    </div>
+    <div class="space"></div><button class="button item">Réservation</button>
+</div>
+<div class="hero-image-3">
+    <div class="hero-text-3">
+        <h3>MENU DU MARCHÉ</h3>
+        <h4 class="menu-align">Formule dîner</h4>
+        <p class="menu-align-p">Du lundi au samedi</p>
+        <p class="menu-align-p">Entrée + Plat + Dessert 20€</p>
+        <p><br>
+            Pâté de campagne</p>
+        <p>Raclette</p>
+        <p>Macarons</p>
+        <h4 class="menu-align">Formule déjeuner</h4>
+        <p class="menu-align-p">Du lundi au vendredi</p>
+        <p class="menu-align-p">Entrée + Plat + Dessert 16€</p>
+        <p><br>
+            Paté en croute</p>
+        <p>Tarte au reblochon de Savoie</p>
+        <p>Paris-Brest</p>
+    </div>
+</div>
+<div class="container-4">
+    <h3>Nos horaires d'ouvertures</h3>
+</div>
+<div class="container">
+    <table class="table">
+        <tbody>
+        <tr>
+            <td>Lundi</td>
+            <td class="color-table">12:00 - 14:30</td>
+            <td class="color-table">19:00 - 22:30</td>
+        </tr>
+        <tr>
+            <td>Mardi</td>
+            <td class="color-table">12:00 - 14:30</td>
+            <td class="color-table">19:00 - 22:30</td>
+        </tr>
+        <tr>
+            <td>Mercredi</td>
+            <td class="color-table">12:00 - 14:30</td>
+            <td class="color-table">19:00 - 21:30</td>
+        </tr>
+        <tr>
+            <td>Jeudi</td>
+            <td class="color-table">12:00 - 14:30</td>
+            <td class="color-table">19:00 - 22:30</td>
+        </tr>
+        <tr>
+            <td>Vendredi</td>
+            <td class="color-table">12:00 - 15:00</td>
+            <td class="color-table">19:00 - 23:00</td>
+        </tr>
+        <tr>
+            <td>Samedi</td>
+            <td class="color-table">19:00 - 23:00</td>
+        </tr>
+        <tr>
+            <td>Dimanche</td>
+            <td class="color-table">Fermé</td>
+        </tr>
+        </tbody>
+    </table>
+</div>{% include("footer.html.twig") %} {% block footer %} {% endblock %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Edit Figure</title>
+
+{% block body %}
+    <h1>Edit Figure</h1>
+
+    {{ include('figure/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_figure_index') }}">back to list</a>
+
+    {{ include('figure/_delete_form.html.twig') }}
+{% endblock %}

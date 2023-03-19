@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>    
+
+	<meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Le restaurant Quai Antique" />
+    <meta name="keywords" content="restaurant, restaurant savoyard, Arnaud Michant"/>
+    <meta name="author" content="Jason Maurice" />
+    
+	<title>Quai Antique - {% block title %}{% endblock %}</title>
+	<link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22&gt;&lt;text y=%221.2em%22 font-size=%2296%22&gt;⚫️&lt;/text&gt;&lt;/svg&gt;" rel="icon">
+</head>
+<body>
+{% block stylesheets %}
+	<link href="public/css/app3.css" rel="stylesheet">{% endblock %} {% block javascripts %}
+	<link href="assets/app2.js" rel="stylesheet">{% endblock %} {% include "partials/_header.html.twig" %} {% block body %}{% endblock %} {% include "partials/_footer.html.twig" %}
+</body>
+</html>

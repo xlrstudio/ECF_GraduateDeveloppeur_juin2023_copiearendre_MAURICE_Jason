@@ -1,0 +1,10 @@
+twig:
+    form_themes: [ 'bootstrap_5_horizontal_layout.html.twig' ]
+    paths:
+        '%kernel.project_dir%/templates/admin': theme
+        '%kernel.project_dir%/templates': theme
+
+when@test:
+    twig:
+        strict_variables: true
+

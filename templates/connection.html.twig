@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Le restaurant Quai Antique" />
+    <meta name="keywords" content="restaurant, restaurant savoyard, Arnaud Michant"/>
+    <meta name="author" content="Jason Maurice" />
+    
+    <title>QUAI ANTIQUE</title>
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <script defer src="/assets/js/script.js">
+    </script>
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+{% include("navbar.html.twig") %} {% block css %} {% endblock %}
+<div class="container">
+    <div class="text-center">
+        {% block Message %} {{ form_start(form) }} {{ form_row(form.Title) }} {{ form_row(form.Message) }} {{ form_row(form.UserEmail) }} <input type="submit"> {{ form_end(form) }} {% endblock %}
+    </div>
+</div>{% include("footer.html.twig") %} {% block footer %} {% endblock %}
+</body>
+</html>
